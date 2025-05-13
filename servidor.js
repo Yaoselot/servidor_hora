@@ -9,7 +9,8 @@ app.use(cors());
 
 app.get('/hora', (req, res) => {
     const hora = new Date();
-    res.json({hora: hora.toDateString() });
+    const horaFormateada = hora.toLocaleTimeString;
+    res.json({hora: hora.horaFormateada});
 });
 
 app.listen(port, () => {
